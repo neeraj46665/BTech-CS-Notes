@@ -1,0 +1,3 @@
+Btech notes 
+galgotias University
+
