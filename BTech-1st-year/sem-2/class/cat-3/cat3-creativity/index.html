@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Sans+KR:wght@100;300&family=Poppins:ital,wght@0,200;0,700;1,600&family=Roboto:ital,wght@1,100&family=Water+Brush&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href=""><img src="img/logo4.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Best E-Heath Company</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, veritatis?<br> Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quasi, illo!</p>
+            <a href="about.html" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+    
+
+    <!-- campus -->
+    <section class="campus" id="home">
+        <h1>Our Global Partner</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minima dolores, ab, architecto, reiciendis
+            nobis voluptatibus culpa saepe porro rerum exercitationem aut corporis.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="img/london.png" alt="">
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="img/newyork.png" alt="">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="img/washington.png" alt="">
+                <div class="layer">
+                    <h3>INDIA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- facilities -->
+    <section class="facilities" id="shop">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis ipsam nobis voluptas molestias dolorem laudantium animi dolores eos fugit alias!</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="img/doctor.jpg" alt="">
+                <h3>Connect To World Class Doctor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, accusamus!</p>
+            </div>
+            <div class="facilities-col">
+                <img src="img/food.jpg" alt="">
+                <h3>Get Best Diet Plan</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, accusamus!</p>
+            </div>
+            <div class="facilities-col">
+                <img src="img/workout.jpg" alt="">
+                <h3>Health Information</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, accusamus!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- course -->
+    <!-- <section class="course" id="courses">
+        <h1>Facilities We Offer</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, a.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis repellendus nihil dolor
+                    nesciunt, minima harum quisquam mollitia nisi provident, libero consequuntur possimus facilis?</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis repellendus nihil dolor
+                    nesciunt, minima harum quisquam mollitia nisi provident, libero consequuntur possimus facilis?</p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis repellendus nihil dolor
+                    nesciunt, minima harum quisquam mollitia nisi provident, libero consequuntur possimus facilis?</p>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Pricing -->
+    
+    <section class="white-section" id="pricing">
+    
+        <h2 class="section-heading">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, sint?</p>
+    
+        <div class="row">
+    
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Basic</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price-text">Free</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Standard</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price-text">$49 / mo</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="pricing-column col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Premium</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price-text">$99 / mo</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+    
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+        </div>
+    
+    </section>
+
+    <!-- testimonials -->
+    <section class="testimonials">
+        <h1>What Our Customer Says</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, excepturi non. Accusantium, eligendi modi? Deserunt repellendus ducimus nulla repudiandae suscipit tempore illum rerum ab.</p>
+        <div class="row">
+            <div class="testimonials-col">
+                <img src="img/profile1.jpg" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, vitae.</p>
+                    <h3>Varun Roy</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img src="img/user2.jpg" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, vitae.</p>
+                    <h3>David Byer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- call to action -->
+    <section class="cta" id="contact">
+        <h1>Enroll For Our Various Online E-Health Services Anywhere From The World</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+  
+
+    <!-- footer -->
+    <section class="footer">
+        <h4>About US</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum nam architecto tempore natus iure<br> blanditiis molestias esse, veritatis maxime aspernatur cum assumenda.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by Neeraj Singh </i></p>
+    </section>
+
+    <!-- javascript -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
