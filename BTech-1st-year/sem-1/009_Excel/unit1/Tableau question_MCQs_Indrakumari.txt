@@ -1,0 +1,67 @@
+What Are The File Extensions In Tableau ?
+A. Tableau Workbook (.twb)
+B. Tableau Packaged Workbook (.twbx)
+C. Tableau Data Source(.tds)
+D. All of the mentioned
+ANSWER: D
+
+What Are The Components Of A Dashboard?
+A. Horizontal
+B. Vertical
+C. Image Extract
+D. All of the mentioned
+ANSWER: D
+
+How Many Maximum Tables Can You Join In Tableau?
+A. 2
+B. 8
+C. 16
+D. 32
+ANSWER: D
+
+Default aggregation used for tree map
+A. Avg
+B. Sum
+C. Count
+D. Countd
+ANSWER: B
+
+Which of the following is not a Tableau product?
+A. Server
+B. Desktop
+C. Online
+D. Private
+ANSWER: D
+
+By definition, Tableau displays measures over time as a ____________
+A. Bar
+B. Line
+C. Histogram
+D. Scatter Plots
+ANSWER: B
+
+How many types of charts are available in Tableau?
+A. 23
+B. 24
+C. 25
+D. 26
+ANSWER: B
+
+____________ in Tableau is grouping multiple members/values into several groups which will create a higher category of the dimension. 
+A. Grouping
+B. Set
+C. Parameter
+D. None Mentioned
+ANSWER: A
+
+Tableau supports JSON files
+A. True
+B. False
+ANSWER: A
+
+What is the default Join in Tableau ?
+A. Inner Join
+B. Outer Join
+C. Left Outer Join
+D. Right Outer Join
+ANSWER: A
