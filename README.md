@@ -16,6 +16,7 @@ These notes may be useful to you if you are a student of [Galgotias University](
  - [Sem-1](https://github.com/neeraj46665/SEM-3/tree/main/BTech-1st-year/sem-1)
  - [Sem-2](https://github.com/neeraj46665/SEM-3/tree/main/BTech-1st-year/sem-2)
  - [Sem-3](https://github.com/neeraj46665/SEM-3/tree/main/BTech-2nd-year/sem-3)
+ - [Sem-4](https://github.com/neeraj46665/SEM-3/tree/main/BTech-2nd-year/sem-4)
 
 
 
