@@ -1,0 +1,86 @@
+What are Para-Jumbles?
+Para-Jumble refers to a paragraph wherein the sentences forming it are jumbled. So, what are we supposed to do here? We are required to arrange the sentences in a proper manner such that they link and form a coherent paragraph.
+
+The name of the topic is in a way misleading, because we are not jumbling paragraphs here but we are actually straightening out jumbled sentences in a paragraph.This type of question is actually pretty common in various competitive exams and in recent years. The right approach to such type of questions can fetch you good marks in such exams.
+
+Sample Para-Jumble:
+The sentences given in each question, when properly sequenced, form a coherent paragraph. Each sentence is labeled with a letter. Choose the most logical order of sentences from among the given choices to construct a coherent paragraph.
+
+A. On Monday the secretary of state is due to hold a day of meetings with high-level political, military and business figures to further a "strategic dialogue" aimed at further expansion of US trade in India.
+
+B. US secretary of state Hillary Clinton arrived in India on Sunday for strategic talks aimed at bolstering bilateral ties and securing firmer support for the war in Afghanistan.
+
+C. Clinton arrived by plane in Delhi before noon, according to a reporter travelling with her, ahead of expected talks with Prime Minister Manmohan Singh and President Pratibha Patel in the evening.
+
+1. BAC2. BCA3. CBA4. CAB
+This is a fairly easy question and hope each one of you was able to identify Option 2, BCA, as the correct answer.
+The key points for identifying the correct answer in this case are:
+Statement B forms the perfect starting sentence, providing us with the ideal introduction for hat is to follow.
+Statements C and A take forward the paragraph in the chronological order in which the events are scheduled, with first the explanation for the evening being provided and then for the next day.
+Different types of Para jumbles:
+
+1. In the first type, in the question simply 4 or 5 sentences are given, which need to be rearranged into a paragraph.
+
+For example:
+A. Group Banking is the system in which two or more independently incorporated banks are brought under the control of a holding company.
+B. Under group banking, the individual banks may be unit banks, or banks operating branches or a combination of the two.
+C. That is, each bank in the group has got a separate entity.
+D. Participating banks retain their own boards of directors which are responsible to the supervising and regulatory authority and depositors for the proper operation of the bank.
+E. The holding company may or may not be a banking company.
+
+1. CDBAE2. EADCB3. AEBDC4. ECBDA
+
+
+
+2. In the second type, the opening sentence and closing sentence are already fixed.
+
+For example:
+1. India is not deemed to be a respectable nation when it comes to sports.
+A. The prime reason for poor performances is corruption & political interference.
+B. Even though, huge amount is spent on training and grooming of the players we still have not been able to achieve the desired results.
+C. Due to this many times a good player is left out.
+D. As a result of that no good players get entries into some important sports competitions and to prove their worth take escape through doping.
+6. Doping is a way to enhance the performance by the means of drugs and steroids.
+
+1. ABCD2. CBDA3. BDCA4. BACD3. In the third type, questions are asked after the jumbled sentences. This type usually only comes in banking exams.
+
+For example:
+A. But this does not mean that death was the Egyptians' only preoccupation.
+B. Even papyri come mainly from the pyramids.
+C. Most of our traditional sources of information about the Old Kingdom are monuments of the rich like pyramids and tombs.
+D. Houses in which ordinary Egyptians lived have not been preserved, and when most people died they were buried in simple graves.
+E. We know infinitely more about the wealthy people of Egypt than we do about the ordinary people, as most monuments were made for the rich.
+F. Customs of any culture can be a reliable source to know about the people of that culture but status of people can bring in differences.
+
+Which sentence will be first after the rearrangement?
+1. E2. B3. F4. C
+
+Basic Strategies for solving Para-jumble Questions:Try to locate the introductory sentence: 
+
+While you go through the labelled sentences, try to look for one that makes a fresh beginning. It should not be a sentence that is extending previous ideas.
+Check for Conclusive Last Sentences: Test setters are smart. They would typically not let you get away so easily. There are multiple options beginning with the introductory sentence. So you will need more than one clue. The last sentence in the paragraph is one that summarizes and has links to previous sentences.
+Anticipate the order of the sentences: Knowing that going through each choice is cumbersome, you must clearly work towards generating some kind of order in your mind, before you look at the options. This tactic will help save the precious time.
+
+See if there are any logical sequences among sentence pairs: Very often a pair of sentences can be chronologically arranged because of clues in one of the sentences. Standard clues include reference to a person or a thing. The first time such a reference is made, a noun form is used. The second reference will be pronoun or a preposition. For example, look at these two sentences:
+
+A. Its origins lie in Konark, where a huge chariot of Lord Jagannath is made every year to be taken out in a procession.
+B. The juggernaut, though it seems very German in origin, is actually quite Asian.
+
+The "Its" in sentence A refers clearly to juggernaut. So we can infer that sentence B precedes sentence A. 
+
+Only using this information of the "its", we do not know if B comes immediately before A or whether one or two sentences separate A and B. But by looking closely, you will also see a common word- "origin", which hunts at the fact that the relationship is of immediate precedence.
+
+Confirm the closest option: Having scribbled something like BCDA next to the question, do check if such an option exists. If you see an option like BDCA also alongside, then it would make sense to reconfirm the fact that sentence D follows sentence 
+
+In case there is no exact match, the judgment about a close option being correct, will depend whether there is a match on the introductory and the concluding sentences. If there is, then it is worth taking a chance and ticking that option off. If there is more than one such match, then a closer examination is required.
+
+Plug in all the options: If everything else has failed, this is the last tactic. But this tactic needs to be used judiciously, especially in tests where there is negative marking.
+
+Skills you need to Solve Para-jumbles Questions:
+
+Understanding the topic of the paragraph: One should be able to discern what is being talked about, because the subject of individual sentences forms the most important clue for establishing links between various sentences.
+
+Understanding the information flow and approach of author: The second thing that is pivotal to identify is the information flow that has been adopted by the author. What is his exact purpose in the paragraph? Is he explicating something or is he criticizing something? Being able to identify his purpose in the paragraph will obviously help us to establish the order of sentences.
+
+A pre-requisite to develop the two skills above is to possess the qualities of a Good Reader. In any case, you would have realized by now that the above qualities are actually the product of possessing a good reading habit.
+So, kindly keep this factor in mind and provide yourself with as much exposure as possible to lots of reading material.
