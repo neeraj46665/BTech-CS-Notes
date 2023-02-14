@@ -5,7 +5,7 @@
 # Notes For Btech
 
 These notes may be useful to you if you are a student of [Galgotias University](https://www.galgotiasuniversity.edu.in).
-- you can fork this repository
+
 
 
     
