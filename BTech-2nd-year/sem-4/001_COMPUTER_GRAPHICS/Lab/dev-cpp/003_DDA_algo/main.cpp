@@ -26,7 +26,7 @@ int main()
     i = 1;  
     while(i<= steps)  
     {  
-        putpixel(x, y, RED);  
+        putpixel(x, y, WHITE);  
         x += dx;  
         y += dy;  
         i=i+1;  
