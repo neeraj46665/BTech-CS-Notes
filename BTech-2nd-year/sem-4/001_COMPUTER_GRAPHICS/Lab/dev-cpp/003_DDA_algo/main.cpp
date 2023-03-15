@@ -8,7 +8,7 @@ int main()
     int x0, x1, y0, y1;  
     initgraph(&gd, &gm, "C:\\TC\\BGI");  
     setbkcolor(WHITE);  
-    x0 = 100 , y0 = 200, x1 = 500, y1 = 300;  
+    x0 = 5 , y0 = 4, x1 = 12, y1 = 7;  
     dx = (float)(x1 - x0);  
     dy = (float)(y1 - y0);  
     if(dx>=dy)  
