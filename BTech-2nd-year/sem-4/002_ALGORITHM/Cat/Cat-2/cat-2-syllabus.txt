@@ -1,0 +1,13 @@
+Finding Maximum and minimum ,
+Algorithm for finding closest pair,
+Convex Hull Problem ,
+Red black tree, 
+M-way search tree ,
+B – trees ,
+Binomial Heaps ,
+Fibonacci Heaps ,
+Dynamic Programming - 0/1 Knapsack Problem ,
+Dynamic Programming- Travelling Salesman Problem ,
+Dynamic Programming- Multistage Graph- Forward path ,
+Multistage Graph- backward path ,
+N Queen's Problem
