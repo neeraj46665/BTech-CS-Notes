@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<stdlib.h>
+/* max utility function to find max out of two values */
+int max(int a, int b) { 
+	 	return (a > b)? a : b; 
+	} 
+int knapsack(int w[], int p[], int n, int W, int **dpTable) {
+	if (dpTable[n][W] != -1) {
+		// If the value is already computed, return it from dpTable
+		return dpTable[n][W];
+	}
+	
+	if (n == 0 || W == 0) {
+		// If no items are left or the capacity of the knapsack is 0, return 0
+		dpTable[n][W] = 0;
+	} else if (w[n-1] > W) {
+		// If the weight of the current item is greater than the capacity of the knapsack, exclude it
+		dpTable[n][W] = knapsack(w, p, n-1, W, dpTable);
+	} else {
+		// Otherwise, include the current item and compute the maximum value
+		dpTable[n][W] = max(p[n-1] + knapsack(w, p, n-1, W-w[n-1], dpTable),
+							knapsack(w, p, n-1, W, dpTable));
+	}
+
+	return dpTable[n][W];
+}
+
+/* Driver code */
+int main() {
+	int i, j, n;
+	int W;  //capacity of knapsack
+	int Max; // To store the final profit
+	int *w;  //weight of items
+	int *p;  //value of items
+	int **dpTable; // Auxiliary 2-D table to store results computed
+	printf("Enter the no. of items: ");
+	scanf("%d",&n);
+	w = (int *)malloc(n*sizeof(int));
+	p = (int *)malloc(n*sizeof(int));
+	printf("Enter the weight and price of all items\n");
+	for(i = 0;i < n;i++)
+		scanf("%d%d",&w[i],&p[i]);
+    printf("enter the capacity of knapsack: ");
+    scanf("%d",&W);
+    dpTable = (int**)malloc((n + 1) * sizeof(int*));
+    for (i = 0; i < n + 1; i++)
+        dpTable[i] = (int*)malloc((W + 1) * sizeof(int));
+    for( i = 0 ; i < n + 1; i++)
+    	for(j = 0; j < W + 1; j++)
+    		dpTable[i][j] = -1;
+    Max =  knapsack(w,p,n,W,dpTable);
+    printf("The maximum value of items that can be put into knapsack is: %d ", Max);
+}
+

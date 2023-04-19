@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+void hanoi(int n, char from, char via, char to) {
+	if (n == 1) {
+		printf("Move disk - 1 from pole %c to %c\n", from, to);
+	} else {
+		hanoi(n - 1, from, to, via);
+		printf("Move disk - %d from pole %c to %c\n", n, from, to);
+		hanoi(n - 1, via, from, to);
+	}
+}

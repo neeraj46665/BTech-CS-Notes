@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+#define NO_OF_CHARS 256
+
+void preprocess_strong_suffix(int *shift, int *bpos, char *pat, int pat_len) {
+	int i = pat_len, j = pat_len + 1;
+	bpos[i] = j;
+	while (i > 0) {
+		while (j <= pat_len && pat[i - 1] != pat[j - 1]) {
+			if (shift[j] == 0)
+			shift[j] = j - i;
+			j = bpos[j];
+		}
+		i--;
+		j--;
+		bpos[i] = j;
+	}
+}
+
+void preprocess_good_suffix(int *shift, int *bpos, char *pat, int pat_len) {
+	int i, j;
+	j = bpos[0];
+	for (i = 0; i <= pat_len; i++) {
+		if (shift[i] == 0)
+		shift[i] = j;
+		if (i == j)
+		j = bpos[j];
+	}
+}
+
+void search(char *text, char *pat) {
+	int m = strlen(pat);
+	int n = strlen(text);
+	
+	int *bpos = (int *)malloc((m + 1) * sizeof(int));
+	int *shift = (int *)malloc((m + 1) * sizeof(int));
+	memset(shift, 0, (m + 1) * sizeof(int));
+	
+	preprocess_strong_suffix(shift, bpos, pat, m);
+	preprocess_good_suffix(shift, bpos, pat, m);
+	
+	int i = 0, j;
+	while (i <= n - m) {
+		j = m - 1;
+		while (j >= 0 && pat[j] == text[i + j])
+		j--;
+		
+		if (j < 0) {
+			printf("Found the pattern at index: %d\n", i);
+			i += shift[0];
+		} else {
+			i += shift[j + 1];
+		}
+	}
+	
+	free(bpos);
+	free(shift);
+}
+
+int main() {
+	char *txt, *pat;
+	txt = (char*) malloc(NO_OF_CHARS*sizeof(char));
+	pat = (char*) malloc(NO_OF_CHARS*sizeof(char));
+	printf("Enter the text: ");
+	gets(txt);
+	printf("Enter the pattern to be searched: ");
+	gets(pat);
+	search(txt, pat);
+	free(txt);
+	free(pat);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

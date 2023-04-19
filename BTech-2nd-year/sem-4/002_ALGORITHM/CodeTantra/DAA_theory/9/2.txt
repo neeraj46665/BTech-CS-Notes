@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#define MAX_SIZE 32
+void add(int **a, int **b, int size,int **c);
+void sub(int **a, int **b, int size,int **c);
+void  multiply(int **c,int **d,int size,int size2,int **new){
+    if(size == 1){   
+        new[0][0] = c[0][0] *d[0][0];   
+    }
+    else {
+        // Write your code here to complete the implementation
+        int i, j, k;
+        
+        // Iterate over each row of matrix c
+        for (i = 0; i < size; i++) {
+        	// Iterate over each column of matrix d
+        	for (j = 0; j < size2; j++) {
+        		// Calculate dot product of ith row of matrix c and jth column of matrix d
+        		new[i][j] = 0;
+        		for (k = 0; k < size2; k++) {
+        			new[i][j] += c[i][k] * d[k][j];
+        		}
+        	}
+        }
+    }   
+}
+
+// Driver code
+void main(){
+    int size,p,itr,itr1,i,j,nsize;
+     printf("Enter size of both square matrices\n");   
+    scanf("%d",&size);
+    int tempS = size;
+    if(size & size-1 != 0){
+        p = log(size)/log(2);
+        size = pow(2,p+1);
+    }
+    int **a = malloc(size * sizeof(int *));
+    for(i=0;i<size;i++){
+        a[i] = malloc(size*sizeof(int));
+    }   
+    int **b = malloc(size * sizeof(int *));
+    for(i=0;i<size;i++){
+        b[i] = malloc(size*sizeof(int));
+    }
+    printf("Enter elements of 1st matrix\n");
+    for(itr=0;itr<size;itr++){
+    for(itr1=0;itr1<size;itr1++){
+        if(itr>=tempS || itr1>=tempS )
+            a[itr][itr1]=0;
+        else
+            scanf("%d",&a[itr][itr1]);
+        }
+    }
+    printf("Enter elements of 2nd matrix\n");
+    for(itr=0;itr<size;itr++){
+    for(itr1=0;itr1<size;itr1++){
+        if(itr>=tempS || itr1>=tempS)
+            a[itr][itr1]=0;
+        else
+            scanf("%d",&b[itr][itr1]);
+        }
+    }
+    int **new = malloc(size * sizeof(int *));
+    for(i=0;i<size;i++){
+        new[i] = malloc(size*sizeof(int));
+    }   
+    multiply(a,b,size,size,new);
+   printf("Resultant matrix after strassens multiplication is:\n");
+    if(tempS<size)
+        size =tempS;
+    for(i=0;i<size;i++){
+        for(j=0;j<size;j++){
+            printf("%d   ",new[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+// Utility functions to add and substract matrices
+void add(int **a, int **b, int size,int **c){
+    int i,j;       
+    for(i=0;i<size;i++){
+        for(j=0;j<size;j++){
+            c[i][j] = a[i][j] + b[i][j];   
+        }
+    }
+}
+
+void sub(int **a,int **b,int size,int **c){
+    int i,j;
+    for(i=0;i<size;i++){
+                for(j=0;j<size;j++){
+                        c[i][j]= a[i][j] - b[i][j];
+                }
+        }
+}

@@ -1,0 +1,29 @@
+int MatrixChainMulOrder(int A[], int i, int j) {
+	int n = j - i + 1; // number of matrices in the chain
+	
+	// Create a 2D array to store the minimum number of operations
+	int dp[n][n];
+	
+	// Initialize the diagonal elements to zero (base case)
+	for (int x = 0; x < n; x++) {
+		dp[x][x] = 0;
+	}
+	
+	// Fill the remaining elements in the table diagonally
+	for (int diagonal = 1; diagonal < n; diagonal++) {
+		for (int row = 0; row < n - diagonal; row++) {
+			int col = row + diagonal;
+			dp[row][col] = INT_MAX;
+			for (int k = row; k < col; k++) {
+				int operations = dp[row][k] + dp[k + 1][col] + A[row] * A[k + 1] * A[col + 1];
+				if (operations < dp[row][col]) {
+					dp[row][col] = operations;
+				}
+			}
+		}
+	}
+	
+	// Return the minimum number of operations
+	return dp[0][n-1];
+}
+

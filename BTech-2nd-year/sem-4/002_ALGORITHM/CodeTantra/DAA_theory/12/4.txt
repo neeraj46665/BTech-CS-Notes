@@ -1,0 +1,58 @@
+#include<stdio.h>
+struct Point
+{
+    int x, y;
+};
+int orientation(struct Point p, struct Point q, struct Point r)
+{
+    // Write the code to find the orientation value here.
+    int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+    if (val == 0) {
+    	return 0; // colinear
+    }
+    return (val > 0) ? 1 : 2; // clockwise or counterclockwise
+    
+    
+}
+void Jarvis_ConvexHull(struct Point points[], int n) {
+    struct Point hull[10]; // Store the point on the hull into this variable.
+    int cnt; // Store the count of points on the hull in this variable.
+    
+    //Write the logic of the algorithm here.
+    cnt = 0;
+    
+    // Find the leftmost point
+    int leftmost = 0;
+    for (int i = 1; i < n; i++) {
+    	if (points[i].x < points[leftmost].x) {
+    		leftmost = i;
+    	}
+    }
+    
+    int p = leftmost, q;
+    do {
+    	hull[cnt] = points[p];
+    	cnt++;
+    	q = (p + 1) % n;
+    	for (int i = 0; i < n; i++) {
+    		if (orientation(points[p], points[i], points[q]) == 2) {
+    			q = i;
+    		}
+    	}
+    	p = q;
+    } while (p != leftmost);
+    printf("The points in the convex hull are: \n");
+    for (int i = 0; i < cnt; i++)
+        printf("(%d , %d)\n",hull[i].x,hull[i].y);
+}
+int main() {
+    struct Point pts[10];
+    int n;
+    printf("Enter the number of points: ");
+    scanf("%d",&n);
+    for(int i = 0; i<n;i++) {
+        printf("Enter the x and y coordinates of point %d: ",i);
+        scanf("%d %d",&pts[i].x,&pts[i].y);
+    }
+    Jarvis_ConvexHull(pts,n);
+}

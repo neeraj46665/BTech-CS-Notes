@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<string.h>
+void main() {
+	char a[20][20];
+	int i, j, n, flag = 0, low, high, mid;
+	char temp[20], key [20];
+	printf("Enter value of n : ");
+	scanf("%d", &n);
+	
+	//Write the code to read n string into the array.
+	for (i = 0; i < n; i++) {
+		printf("Enter string for a[%d] : ", i);
+		scanf("%s", a[i]);
+	}
+	printf("Enter key string : ");
+	scanf("%s", key);
+	
+	//Write the logic to sort the array.
+	for (i = 0; i < n - 1; i++) {
+		for (j = 0; j < n - i - 1; j++) {
+			if (strcmp(a[j], a[j + 1]) > 0) {
+				strcpy(temp, a[j]);
+				strcpy(a[j], a[j + 1]);
+				strcpy(a[j + 1], temp);
+			}
+		}
+	}
+	//The code below prints the array after sorting.
+	printf("After sorting the strings in the array are\n");
+	for (i = 0; i < n; i++) {
+		printf("Value of a[%d] = %s\n", i, a[i]);
+	}
+	
+	//Write the code to perform the binary search.
+	low = 0;
+	high = n - 1;
+	while (low <= high) {
+		mid = (low + high) / 2;
+		if (strcmp(key, a[mid]) == 0) {
+			flag = 1;
+			break;
+		} else if (strcmp(key, a[mid]) > 0) {
+			low = mid + 1;
+		} else {
+			high = mid - 1;
+		}
+	}
+	//Fill the condition below.
+
+	if (   flag ) {
+		printf("The key string %s is found at the position %d\n", key, mid);
+	} else {
+		printf("The key string %s is not found in the array\n", key);
+	}
+}
