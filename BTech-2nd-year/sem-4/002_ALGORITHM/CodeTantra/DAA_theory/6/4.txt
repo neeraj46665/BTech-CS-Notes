@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void main() {
+	char a[20][20];
+	int i, n,flag = 0, pos;
+	char key[20];
+	printf("Enter value of n : ");
+	scanf("%d", &n);
+	
+	//Write the code to read n strings into the array.
+	for ( i = 0; i < n; i++ ) {
+		printf("Enter string for a[%d] : ", i);
+		scanf("%s", a[i]);
+	}
+	printf("Enter key string : ");
+	scanf("%s", key);
+	
+	//Write the logic for the linear search.
+	for ( i = 0; i < n; i++ ) {
+		if ( strcmp(a[i], key) == 0 ) {
+			flag = 1;
+			pos = i;
+			break;
+		}
+	}
+	//Fill the condition in the if condition.
+	if ( flag ) {
+		printf("The key string %s is found at the position %d\n", key, pos);
+	} else {
+		printf("The key string %s is not found in the array\n", key);
+	}
+}

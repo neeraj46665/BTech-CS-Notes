@@ -1,0 +1,44 @@
+#include<stdio.h>
+void main() {
+	int a[20], i, j, n, key, flag = 0, low, high, mid, temp;
+	printf("Enter value of n : ");
+	scanf("%d", &n);
+	for (i=0;i<n;i++ ) { // Complete the code in for
+		printf("Enter element for a[%d] : ", i);
+		scanf("%d", &a[i]); // Complete the statement
+	}
+	printf("Enter key element : ");
+	scanf("%d", &key);
+	// Bubble sort process
+	for (i=0;i<n;i++ ) { // Complete the code in for
+		for (j=0;j<n-1-i;j++ ) { // Complete the code in for
+			if ( a[j]>a[j+1]) { // Write the condition part
+				temp = a[j]; // Complete the statement
+				a[j] = a[j+1]; // Complete the statement
+				a[j+1] = temp; // Complete the statement
+			}
+		}
+	}
+	printf("After sorting the elements in the array are\n");
+	for ( i=0;i<n;i++) { // Complete the code in for
+		printf("Value of a[%d] = %d\n", i, a[i]);
+	}
+	low = 0; // Complete the statement
+	high = n-1; // Complete the statement
+	while ( low<=high) { // Complete the condition part in while
+		mid =  low+(high-low)/2; // Complete the statement
+		if ( key==a[mid]) { // Write the condition part
+			flag = 1; // Complete the statement
+			break;
+		} else if ( key>a[mid]) { // Write the condition part
+			low = mid+1; // Complete the statement
+		} else  { // Write the condition part
+			high = mid-1; // Complete the statement
+		}
+	}
+	if (flag ) { // Write the condition part
+		printf("The key element %d is found at the position %d\n", key, mid);
+	} else {
+		printf("The Key element %d is not found in the array\n", key);
+	}
+}

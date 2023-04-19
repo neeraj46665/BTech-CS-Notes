@@ -1,0 +1,35 @@
+#include<stdio.h>
+/* max is a utility function that you can use to find the max */
+int max(int a, int b) { 
+	 	return (a > b)? a : b; 
+	} 
+int knapsack(int w[], int p[], int n, int W) {
+	 // if the capacity of knapsack is left nil return 0
+	 if (n == 0 || W == 0) {
+	 	return 0;
+	 }
+	 // if current item, weighs more than the capacity of knapsack, it can not be included
+	 if (w[n-1] > W) {
+	 	return knapsack(w, p, n-1, W);
+	 }
+	 // Otherwise return the maximum value of profit
+	 return max(p[n-1] + knapsack(w, p, n-1, W-w[n-1]), knapsack(w, p, n-1, W));
+}
+int main() {
+	int i,n;
+	int W;  //capacity of knapsack
+	int Max; // To store the final profit
+	int *w;  //weight of items
+	int *p;  //value of items
+	printf("Enter the no. of items: ");
+	scanf("%d",&n);
+	w = (int *)malloc(n*sizeof(int));
+	p = (int *)malloc(n*sizeof(int));
+	printf("Enter the weight and price of all items\n");
+	for(i = 0;i < n;i++)
+		scanf("%d%d",&w[i],&p[i]);
+    printf("enter the capacity of knapsack: ");
+    scanf("%d",&W);
+    Max =  knapsack(w,p,n,W);
+    printf("The maximum value of items that can be put into knapsack is: %d ", Max);
+}

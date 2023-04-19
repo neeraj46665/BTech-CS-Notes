@@ -1,0 +1,92 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+int asd=1;
+int power(int a,int b){
+	int i;
+	int res = 1;
+	for(i=0;i<b;i++){
+		res = res*a;
+	}
+	return res;
+}
+void sort(int *arr,int n){
+	int i,j;
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(arr[i]>arr[j]){
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+}
+void printSubset(int *arr,int n,int i){
+	if(asd){
+		printf("The solution is: \n");
+	}
+	asd = 0;
+	int bits = 0;
+	int temp = i;
+	while(temp){
+		if(temp & 1)bits++;
+		temp = temp>>1;
+	}
+	int *t = (int*)malloc(bits*sizeof(int));
+	int tn = bits;
+	temp = i;
+	for(int j=n-1;j>=0;j--){
+		if(temp & (1<<j)){
+			t[bits-1] = arr[j];
+			bits--;
+		}
+	}
+	sort(t,tn);
+	printf("{");
+	for(int j=0;j<tn;j++){
+		printf("%d ",t[j]);
+	}
+	printf("}\n");
+	
+}
+
+int main(){
+	// freopen("input.txt","r",stdin);
+	printf("Enter number of elements in the subset: ");
+	int n;
+	scanf("%d",&n);
+	int *arr = (int*)malloc(n*sizeof(int));
+	printf("Enter %d numbers to the set: ",n);
+	int i;
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+	}
+	printf("Enter the input number to find subsets: ");
+	int k;
+	scanf("%d",&k);
+	
+	int count = power(2,n);
+	int flag = 1;
+	for(i=0;i<count;i++){
+		int sum = 0;
+		int temp = i;
+		int t = n;
+		while (temp)
+		{
+			if(temp & 1){
+				sum = sum + arr[n-t];
+			}
+			temp = temp>>1;
+			t--;
+		}
+		
+		if(sum == k){
+			flag = 0;
+			printSubset(arr,n,i);
+		}
+	}
+	if(flag){
+		printf("Subset construction is not possible\n");
+	}
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int sumRecursive(int n) {
+	// Base case: if n is 0, return 0
+	if (n == 0) {
+		return 0;
+	}
+	// Recursive case: add n to the sum of the first n-1 natural numbers
+	else {
+		return n + sumRecursive(n-1);
+	}
+}

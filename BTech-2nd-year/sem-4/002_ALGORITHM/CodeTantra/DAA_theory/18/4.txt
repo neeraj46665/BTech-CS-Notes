@@ -1,0 +1,37 @@
+#include <stdio.h>
+#define MAXCITIES 10
+#define INFINITY 9999
+
+int n, graph[MAXCITIES][MAXCITIES], memo[MAXCITIES][1 << MAXCITIES];
+
+int tsp(int start, int visited) {
+	if(visited == (1 << n) - 1)
+	return graph[start][0];
+	if(memo[start][visited] != -1)
+	return memo[start][visited];
+	int ans = INFINITY;
+	for(int j = 0; j < n; j++) {
+		if(!(visited & (1 << j))) {
+			int temp = graph[start][j] + tsp(j, visited | (1 << j));
+			if(temp < ans)
+			ans = temp;
+		}
+	}
+	return memo[start][visited] = ans;
+}
+
+int main() {
+	scanf("%d", &n);
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < n; j++) {
+			scanf("%d", &graph[i][j]);
+		}
+	}
+	for(int i = 0; i < MAXCITIES; i++) {
+		for(int j = 0; j < (1 << MAXCITIES); j++) {
+			memo[i][j] = -1;
+		}
+	}
+	printf("%d\n", tsp(0, 1));
+	return 0;
+}

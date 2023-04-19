@@ -1,0 +1,45 @@
+/* Function to find the minimum of x and y */
+int min(int x, int y) { 
+	return (x <= y) ? x : y;
+}
+
+/* If element x is not present in the arr[] of size n return -1 , else return the index */
+int fibonaccianSearch(int arr[], int x, int n) { 
+	int m = 0; // Initialize m2 to 0
+	int m1 = 1; // Initialize m1 to 1
+	int m2 = m; // Initialize m with m1+ m2
+	int offset = -1; // Initialize offset with -1
+	
+	// Make m,m1,m2 to point to the next fibonacci numbers
+	while (m < n) {
+		m2 = m1;
+		m1 = m;
+		m = m1 + m2;
+	}
+	
+	// while there are elements to be inspected
+	while (m > 1) {
+		// Choose the minimum of the offset + m2 and n-1 as the index of the element to be inspected
+		int i = min(offset + m2, n - 1);
+		
+		// If x is greater than the value at index i, cut the subarray array from offset to i
+		if (arr[i] < x) {
+			m = m1; // move the Fibonacci variable 2 steps down,
+			m1 = m2; // adjust the indices,
+			m2 = m - m1; 
+			offset = i; // and update the offset accordingly
+		} else if (arr[i] > x) {
+			m = m2; // move the Fibonacci variable 1 step down,
+			m1 = m1 - m2; // adjust the indices,
+			m2 = m - m1;
+		} else {
+			return i; // element found
+		}
+	}
+	
+	if (m1 && arr[offset + 1] == x) {
+		return offset + 1; // boundary condition
+	}
+	
+	return -1; // element not found
+}

@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+void main() {
+	int a[20], i, j, n, key, flag = 0, low, high, mid, temp;
+	printf("Enter value of n : ");
+	scanf("%d", &n);
+	
+	// Read an array of elements
+	for (i=0;i<n;i++) {
+		printf("Enter element for a[%d] : ", i);
+		scanf("%d", &a[i]);
+	}
+	
+	printf("Enter key element : ");
+	scanf("%d", &key);
+	
+	// Sort the elements using bubble sort technique
+	for (i=0;i<n;i++) {
+		for (j=0;j<n-1-i;j++) {
+			if (a[j]>a[j+1]) {
+				temp = a[j];
+				a[j] = a[j+1];
+				a[j+1] = temp;
+			}
+		}
+	}
+	
+	printf("After sorting the elements in the array are\n");
+	for (i=0;i<n;i++) {
+		printf("Value of a[%d] = %d\n", i, a[i]);
+	}
+	
+	low = 0;
+	high = n-1;
+	
+	// Search an element using binary search process
+	while (low<=high) {
+		mid = low+(high-low)/2;
+		if (key==a[mid]) {
+			flag = 1;
+			break;
+		} else if (key>a[mid]) {
+			low = mid+1;
+		} else {
+			high = mid-1;
+		}
+	}
+	
+	if (flag) {
+		printf("The key element %d is found at the position %d\n", key, mid);
+	} else {
+		printf("The Key element %d is not found in the array\n", key);
+	}
+}

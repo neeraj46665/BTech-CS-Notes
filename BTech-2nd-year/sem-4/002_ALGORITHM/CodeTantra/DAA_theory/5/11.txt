@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int sumOfArrayElementsRecursive(int arr[], int n) {
+	// Base case: if the array is empty, return 0
+	if (n == 0) {
+		return 0;
+	}
+	// Recursive case: add the first element to the sum of the rest of the array
+	else {
+		return arr[n-1] + sumOfArrayElementsRecursive(arr, n-1);
+	}
+}

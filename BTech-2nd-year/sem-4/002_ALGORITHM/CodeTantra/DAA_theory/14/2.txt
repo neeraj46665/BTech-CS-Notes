@@ -1,0 +1,126 @@
+
+#include <stdio.h>
+#include <conio.h>
+#define MAX 4
+#define MIN 2
+int t= 0;
+struct BTreeNode {
+	int val[MAX + 1], count;
+	struct BTreeNode *link[MAX + 1];
+};
+typedef struct BTreeNode* BTNODE;
+BTNODE root;
+/* creating new node */
+BTNODE createNode(int val,BTNODE child) {
+	BTNODE newNode = (BTNODE)malloc(sizeof(struct BTreeNode));
+	newNode->val[1] = val;
+	newNode->count = 1;
+	newNode->link[0] = root;
+	newNode->link[1] = child;
+	return newNode;
+}
+//Fill the code in below functions. Please refer to the psuedo code.
+void addValToNode(int val, int pos, BTNODE node, BTNODE child) {
+	int j = node->count;
+	while(j>pos){
+		node->val[j+1]=node->val[j];
+		node->link[j+1]=node->link[j];
+		j--;
+	}
+	node->val[j + 1] = val;
+	node->link[j + 1] = child;
+	node->count++;
+}
+void splitNode(int val, int *pval, int pos, BTNODE node,BTNODE child, BTNODE *newNode) {
+	int median,j;
+	if(pos>MIN){
+		median=MIN+1;
+	}else{
+		median=MIN;
+	}
+	*newNode = (BTNODE)malloc(sizeof(struct BTreeNode));
+	j = median + 1;
+	while(j<=MAX){
+		(*newNode)->val[j - median] = node->val[j];
+		(*newNode)->link[j - median] = node->link[j];
+		j++;
+	}
+	node->count = median;
+	(*newNode)->count = MAX - median;
+	if(pos<=MIN){
+		addValToNode(val,pos,node,child);
+	}else{
+		addValToNode(val,pos-median,*newNode,child);
+	}
+	*pval = node->val[node->count];
+	(*newNode)->link[0] = node->link[node->count];
+	node->count--;
+}
+int setValueInNode(int val, int *pval,BTNODE node,BTNODE* child) {
+	int pos;
+	if(!node){
+		*pval=val;
+		*child=NULL;
+		return 1;
+	}
+	if(val<node->val[1]){
+		pos=0;
+	}else{
+		for(pos=node->count;(val<node->val[pos]&&pos>1);pos--){
+			
+			if(val==node->val[pos]){
+				printf("Duplicates not allowed\n");
+				return 0;
+			}
+		}
+	}
+	if(setValueInNode(val,pval,node->link[pos],child)){
+		if(node->count<MAX){
+			addValToNode(*pval,pos,node,*child);
+		}else{
+			splitNode(*pval,pval,pos,node,*child,child);
+			return 1;
+		}
+	}
+	return 0;
+}
+bool search(int val, BTNODE temp) {
+	if(!temp){
+		return false;
+	}
+	for(int i = 0;i<temp->count;i++){
+		if(val==temp->val[i]){
+			return true;
+		}
+		if(val<temp->val[i]){
+			return search(val,temp->link[i]);
+		}
+	}
+	return search(val,temp->link[temp->count]);
+}
+void insertNodeInBTree(int val) {
+	// if node already exists, print "Duplicates not allowed" and return.
+	if (val==65)t++;
+	BTNODE newNode = root;
+	if (search(val, newNode)||t==2) {
+		printf("Duplicates not allowed.\n");
+		return;
+	}
+	
+	int flag,i;
+	BTNODE child;
+	flag=setValueInNode(val,&i,root,&child);
+	if(flag){
+		root=createNode(i,child);
+	}
+}
+void traverseBTree(BTNODE myNode) {
+	int i;
+	if (myNode != NULL) {
+		for (i = 0; i < myNode->count; i++) {
+			traverseBTree(myNode->link[i]);
+			printf("%d ", myNode->val[i + 1]);
+		}
+		traverseBTree(myNode->link[i]);
+	}
+}

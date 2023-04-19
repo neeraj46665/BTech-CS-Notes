@@ -1,0 +1,71 @@
+#include<stdio.h>
+#define MAX 50
+
+void matrixMultiply(int[MAX][MAX], int[MAX][MAX]);
+int row1, row2, col1, col2;
+int result[MAX][MAX];
+int main() {
+	int m1[MAX][MAX], m2[MAX][MAX], i, j, k;
+	printf("Enter the row and column of first matrix: ");
+	scanf("%d %d", &row1, &col1);
+	printf("Enter the row and column of second matrix: ");
+	scanf("%d %d", &row2, &col2);
+	if (col1 != row2) {
+		printf("Matrix multiplication is not possible");
+	} 
+	else {
+		printf("Enter the First matrix:\n");
+		for (i = 0; i < row1; i++) {
+			for (j = 0; j < col1; j++) {
+				scanf("%d", &m1[i][j]);
+			}
+		}
+
+	printf("Enter the Second matrix:\n");
+	for (i = 0; i < row2; i++) {
+		for (j = 0; j < col2; j++) {
+			scanf("%d", &m2[i][j]);
+		}
+	}
+
+	printf("The First matrix is:\n");
+	for (i = 0; i < row1; i++) {
+		for (j = 0; j < col1; j++) {
+			printf("%d ", m1[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("The Second matrix is:\n");
+	for (i = 0; i < row2; i++) {
+		for (j = 0; j < col2; j++) {
+			printf("%d ", m2[i][j]);
+		}
+		printf("\n");
+	}
+	matrixMultiply(m1, m2);
+}
+
+	printf("The multiplication of two matrixes is:\n");
+	for (i = 0; i < row1; i++) {
+		for (j = 0; j < col2; j++) {
+			printf("%d ", result[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+void matrixMultiply(int a[MAX][MAX], int b[MAX][MAX]) {
+	// write the missing code here
+	int i, j, k;
+	for (i = 0; i < row1; i++) {
+		for (j = 0; j < col2; j++) {
+			result[i][j] = 0;
+			for (k = 0; k < col1; k++) {
+				result[i][j] += a[i][k] * b[k][j];
+			}
+		}
+	}
+	
+}

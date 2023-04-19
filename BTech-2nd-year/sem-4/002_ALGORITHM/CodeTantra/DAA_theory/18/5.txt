@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <limits.h>
+
+int N = 8; // Number of nodes in the graph
+#define INF 999999999 // Infinity
+
+// Find the shortest distance in a multistage graph
+int shortestDistance(int graph[N][N]) {
+	int dist[N]; // dist[i] stores the shortest distance from node i to node N-1
+	
+	// Initialize the distance to N-1 as 0
+	dist[N-1] = 0;
+	
+	// Calculate shortest path for rest of the nodes
+	for (int i = N-2; i >= 0; i--) {
+		dist[i] = INF; // Initialize distance to infinity
+		
+		// Check all nodes of next stages to find shortest distance from i to N-1
+		for (int j = i+1; j < N; j++) {
+			// Reject if no edge exists
+			if (graph[i][j] == INF) {
+				continue;
+			}
+			
+			// Apply the recursive equation to distance to target through j,
+			// and compare with minimum distance so far
+			dist[i] = dist[i] < graph[i][j] + dist[j] ? dist[i] : graph[i][j] + dist[j];
+		}
+	}
+	
+	return dist[0]; // Return the shortest distance from 0 to N-1
+}
+
+int main() {
+	scanf("%d", &N);
+	int graph[N][N];
+	for(int i = 0; i < N; i++) {
+		for(int j = 0; j < N; j++) {
+			scanf("%d", &graph[i][j]);
+		}
+	}
+	
+	
+	printf("%d\n", shortestDistance(graph)); // Expected output: 9
+	
+	return 0;
+}
+
