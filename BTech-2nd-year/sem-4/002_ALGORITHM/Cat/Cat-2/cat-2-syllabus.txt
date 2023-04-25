@@ -11,6 +11,10 @@ Dynamic Programming- Travelling Salesman Problem ,
 Dynamic Programming- Multistage Graph- Forward path ,
 Multistage Graph- backward path ,
 N Queen's Problem
-
+matrix-chain-multiplication
 
 Problems Fibonacci heap and N Queens problem are not included in cat-2
+
+
+
+Finding Maximum and minimum ,Algorithm for finding closest pair ,Convex Hull Problem ,Red black tree, M-way search tree ,B – trees ,Binomial Heaps ,Dynamic Programming - matrix chain multiplication, 0/1 Knapsack Problem ,Dynamic Programming- Travelling Salesman Problem ,Dynamic Programming- Multistage Graph- Forward path ,Multistage Graph- backward path ,fibinacci heap, N Queen's Problem
