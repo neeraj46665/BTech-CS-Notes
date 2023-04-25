@@ -11,3 +11,6 @@ Dynamic Programming- Travelling Salesman Problem ,
 Dynamic Programming- Multistage Graph- Forward path ,
 Multistage Graph- backward path ,
 N Queen's Problem
+
+
+Problems Fibonacci heap and N Queens problem are not included in cat-2
