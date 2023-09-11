@@ -17,6 +17,8 @@
  - [Sem-2](https://github.com/neeraj46665/SEM-3/tree/main/BTech-1st-year/sem-2)
  - [Sem-3](https://github.com/neeraj46665/SEM-3/tree/main/BTech-2nd-year/sem-3)
  - [Sem-4](https://github.com/neeraj46665/SEM-3/tree/main/BTech-2nd-year/sem-4)
+ - [Sem-5](https://github.com/neeraj46665/BTech-CS-Notes/tree/main/BTech-3rd-year/sem-5)
+
 
 
 
