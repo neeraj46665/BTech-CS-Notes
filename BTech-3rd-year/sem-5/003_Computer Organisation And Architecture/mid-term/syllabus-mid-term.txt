@@ -1,0 +1,4 @@
+Mid Term COA Syllabus:
+Unit 1 & 2 complete, 
++
+Unit 3 (Control Unit): Instruction types, formats, Instruction cycles and sub cycles (fetch and execute etc) , Micro-operations, execution of a complete instruction.
